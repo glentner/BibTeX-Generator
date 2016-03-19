@@ -17,6 +17,14 @@ function cite_bibtex() {
         var win = window.open(url, '_blank');
         win.focus();
 }
+function cite_mla() {
+        var win = window.open("file:///Users/glentner/Google%20Drive/GitHub/BibTeX-Generator/demo/cite-mla.txt", '_blank');
+        win.focus();
+}
+function cite_apa() {
+        var win = window.open("file:///Users/glentner/Google%20Drive/GitHub/BibTeX-Generator/demo/cite-apa.txt", "_blank");
+        win.focus();
+}
 </script>
 
 
@@ -122,13 +130,13 @@ Book Review
 <h2>Cite this Book Review :</h2>
 
 <div class="citation" id="citation_apa" style="width:100%;">
-<button onclick="cite_bibtex()" style="width:95%; margin:auto; margin-top:0.5em; height:2.5em; cursor:pointer;">
+<button onclick="cite_apa()" style="width:95%; margin:auto; margin-top:0.5em; height:2.5em; cursor:pointer;">
         APA
 </button>
 </div>
 
 <div class="citation" id="citation_mla" style="width:100%;">
-<button onclick="cite_bibtex()" style="width:95%; margin:auto; margin-top:0.5em; height:2.5em; cursor:pointer;">
+<button onclick="cite_mla()" style="width:95%; margin:auto; margin-top:0.5em; height:2.5em; cursor:pointer;">
         MLA
 </button>
 </div>
