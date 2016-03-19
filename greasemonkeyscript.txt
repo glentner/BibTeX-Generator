@@ -1,0 +1,28 @@
+// ==UserScript==
+// @name     Library Hackathon
+// @version  1.0
+// @author   J. Patrick Lacher
+// @include  https://scholar.google.se/*
+// @require  http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js
+// @grant    GM_addStyle
+// ==/UserScript==
+/*- The @grant directive is needed to work around a design change
+    introduced in GM 1.0.   It restores the sandbox.
+*/
+
+setTimeout (clickLinkWithText, 500, "Cite");
+setTimeout (clickLinkWithText, 1000, "BibTeX");
+
+function clickLinkWithText (linkText) {
+    var targetLink = $("a").filter(function() {
+    return $(this).text() === linkText;});
+    if (targetLink.length) {
+        triggerMouseEvent (targetLink[0], "click");
+    }
+}
+
+function triggerMouseEvent (node, eventType) {
+    var clickEvent = document.createEvent('MouseEvents');
+    clickEvent.initEvent (eventType, true, true);
+    node.dispatchEvent (clickEvent);
+}
