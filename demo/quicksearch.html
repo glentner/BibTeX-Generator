@@ -8,6 +8,18 @@
 <link href="http://xerxes.library.nd.edu/quicksearch/css/xerxes-blue.css?xerxes_version=1.7" rel="stylesheet" type="text/css">
 <link href="http://xerxes.library.nd.edu/quicksearch/css/local.css?xerxes_version=1.7" rel="stylesheet" type="text/css">
 <link href="http://xerxes.library.nd.edu/quicksearch/css/xerxes-print.css?xerxes_version=1.7" rel="stylesheet" type="text/css" media="print">
+
+<script type="text/javascript">
+function cite_bibtex() {
+        var title  = document.getElementsByTagName("h1")[0].innerHTML.split(" ");
+        var search = title.join("+")
+        url= "http://scholar.google.se/scholar?hl=en&q=${" + search + "}";
+        var win = window.open(url, '_blank');
+        win.focus();
+}
+</script>
+
+
 <script src="http://xerxes.library.nd.edu/quicksearch/javascript/onload.js" language="javascript" type="text/javascript"></script><script src="http://xerxes.library.nd.edu/quicksearch/javascript/prototype.js" language="javascript" type="text/javascript"></script><script src="http://xerxes.library.nd.edu/quicksearch/javascript/scriptaculous/scriptaculous.js" language="javascript" type="text/javascript"></script><script src="http://xerxes.library.nd.edu/quicksearch/javascript/message_display.js" language="javascript" type="text/javascript"></script><script src="http://xerxes.library.nd.edu/quicksearch/javascript/tags.js" language="javascript" type="text/javascript"></script><script src="http://xerxes.library.nd.edu/quicksearch/javascript/toggle_metasearch_advanced.js" language="javascript" type="text/javascript"></script><script type="text/javascript">
 
 			// change numSessionSavedRecords to numSavedRecords if you prefer the folder icon to change
@@ -110,19 +122,19 @@ Book Review
 <h2>Cite this Book Review :</h2>
 
 <div class="citation" id="citation_apa" style="width:100%;">
-<button onclick="cite_bibtex();" style="width:95%; margin:auto; margin-top:0.5em; height:2.5em; cursor:pointer;">
+<button onclick="cite_bibtex()" style="width:95%; margin:auto; margin-top:0.5em; height:2.5em; cursor:pointer;">
         APA
 </button>
 </div>
 
 <div class="citation" id="citation_mla" style="width:100%;">
-<button onclick="cite_bibtex();" style="width:95%; margin:auto; margin-top:0.5em; height:2.5em; cursor:pointer;">
+<button onclick="cite_bibtex()" style="width:95%; margin:auto; margin-top:0.5em; height:2.5em; cursor:pointer;">
         MLA
 </button>
 </div>
 
 <div class="citation" id="citation_bibtex" style="width:100%;">
-<button onclick="cite_bibtex();" style="width:95%; margin:auto; margin-top:0.5em; height:2.5em; cursor:pointer;">
+<button onclick="cite_bibtex()" style="width:95%; margin:auto; margin-top:0.5em; height:2.5em; cursor:pointer;">
         BibTeX
 </button>
 </div>
