@@ -13,7 +13,8 @@
 function cite_bibtex() {
         var title  = document.getElementsByTagName("h1")[0].innerHTML.split("` `");
         var search = title.join("+")
-        url= "http://scholar.google.se/scholar?hl=en&q=${" + search + "}";
+        // url= "http://scholar.google.se/scholar?hl=en&q=${" + search + "}";
+        url="https://scholar.google.se/scholar.bib?q=info:3cPsAxoifTMJ:scholar.google.com/&output=citation&scisig=AAGBfm0AAAAAVu2_wo8C9O9279wYzg1MwErh10D_NPl7&scisf=4&hl=en";
         var win = window.open(url, '_blank');
         win.focus();
 }
