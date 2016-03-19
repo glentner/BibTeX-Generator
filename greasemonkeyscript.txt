@@ -10,8 +10,8 @@
     introduced in GM 1.0.   It restores the sandbox.
 */
 
-setTimeout (clickLinkWithText, 500, "Cite");
-setTimeout (clickLinkWithText, 1000, "BibTeX");
+setTimeout (clickLinkWithText, 60, "Cite");
+setTimeout (clickLinkWithText, 160, "BibTeX");
 
 function clickLinkWithText (linkText) {
     var targetLink = $("a").filter(function() {
