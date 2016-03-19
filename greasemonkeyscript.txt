@@ -12,7 +12,6 @@
 
 setTimeout (clickLinkWithText, 60, "Cite");
 setTimeout (clickLinkWithText, 160, "BibTeX");
-setTimeout (cntrlC, 260);
 
 function clickLinkWithText (linkText) {
     var targetLink = $("a").filter(function() {
@@ -26,13 +25,4 @@ function triggerMouseEvent (node, eventType) {
     var clickEvent = document.createEvent('MouseEvents');
     clickEvent.initEvent (eventType, true, true);
     node.dispatchEvent (clickEvent);
-}
-
-function cntrlC() {
-    var target  = document.getElementsByTagName("pre")[0].innerHTML;
-    copyToClipboard(target);
-}
-
-function copyToClipboard(text) {
-  window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
 }
